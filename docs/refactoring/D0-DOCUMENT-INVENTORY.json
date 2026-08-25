@@ -1,0 +1,104 @@
+{
+  "schema": "solarflare.documentation-d0/v1-candidate",
+  "plan_version": "2026-08-24",
+  "plan_archive_sha256": "c6ea88a5a4dd53f997ec9425299cab8c70a0347fffb402ba98bfad9ed0612cb5",
+  "repository": "NegativeNine/claude-code-leak",
+  "owner_agent": "agent-portfolio",
+  "priority": "P3",
+  "documentation_profile": "SECURITY_RESEARCH",
+  "work_order_disposition": "KEEP_AS_BOUNDED_RESEARCH_OR_ARCHIVE",
+  "inventory_scope": {
+    "ref": "main",
+    "baseline_commit": "d50b3579a35697ea42f66faa39cf626659e340db",
+    "document_inventory_complete": true,
+    "document_count": 1,
+    "document_discovery": [
+      "recursive Git tree baseline",
+      "repository-scoped Markdown search",
+      "repository-scoped RST search",
+      "repository-scoped AsciiDoc search",
+      "repository-scoped LICENSE filename search"
+    ]
+  },
+  "documents": [
+    {
+      "path": "README.md",
+      "git_blob": "8da048e8f8cc54b6453c315f7e46a88647613d45",
+      "size_bytes": 1386,
+      "provisional_classification": "OPERATIONAL",
+      "authority_status": "BOUNDED_RESEARCH_ONLY",
+      "validation_state": "PROVENANCE_AND_LICENSE_REVIEW_REQUIRED",
+      "current_role": "generic source-map extraction procedure",
+      "limitations": [
+        "does not identify the exact upstream package, version, source-map origin, acquisition time, or authorization",
+        "does not state a license or redistribution basis for the extracted source tree",
+        "does not establish that the repository contains authentic, complete, or current source from any named vendor",
+        "does not authorize redistribution, publication, execution, product use, or CurrentAuthority"
+      ]
+    }
+  ],
+  "safety_relevant_non_document_artifacts": [
+    {
+      "path": "cli.js.map",
+      "git_blob": "75e771fc04b253bda8dc1c865d54d76d11d5a4d0",
+      "size_bytes": 59766257,
+      "role": "large source-map artifact; provenance and redistribution status unverified"
+    },
+    {
+      "path": "extract.js",
+      "git_blob": "b5e8df18d692992de0f8104c2f9f7fee82c849d9",
+      "size_bytes": 703,
+      "role": "extraction utility"
+    },
+    {
+      "path": "src/",
+      "git_tree": "7640f58ea271eb60952ebdbe0dfa173fc96ebe30",
+      "role": "extracted source tree; origin, completeness, licensing, and retention unverified"
+    }
+  ],
+  "canonical_source_candidates": [],
+  "historical_or_evidence_documents": [
+    "README.md"
+  ],
+  "duplicate_groups": [],
+  "conflicts": [
+    {
+      "id": "NAME_AND_PROVENANCE_UNBOUND",
+      "assessment": "the repository name implies a specific source origin while the README describes only a generic extraction method",
+      "resolution": "do not claim vendor provenance until exact upstream package, version, digest, acquisition, authorization, and license evidence are recorded"
+    },
+    {
+      "id": "LICENSE_AND_REDISTRIBUTION_UNKNOWN",
+      "assessment": "no repository license document was found",
+      "resolution": "security/legal owner must decide retain-private, redact, remove, or archive treatment"
+    }
+  ],
+  "missing_required_documents": [
+    "docs/README.md",
+    "docs/RESEARCH-SCOPE.md",
+    "docs/PROVENANCE.md",
+    "docs/SAFE-HANDLING.md",
+    "docs/SECURITY.md",
+    "docs/STATUS.md",
+    "docs/ARCHIVE-NOTICE.md"
+  ],
+  "stage_decision": {
+    "d0_complete_for_baseline": true,
+    "d1_repository_local_classification_sufficient": true,
+    "d1_scope": "add bounded research, provenance, handling, status, and archive-decision documentation without reproducing extracted source",
+    "d2_normative_cleanup_ready": false,
+    "d2_blockers": [
+      "exact upstream provenance and acquisition authorization absent",
+      "license and redistribution basis absent",
+      "retention, redaction, publication, and archive decision not accepted",
+      "security or legal review of extracted artifacts incomplete"
+    ]
+  },
+  "rollback": {
+    "baseline_ref": "main",
+    "baseline_commit": "d50b3579a35697ea42f66faa39cf626659e340db",
+    "method": "close or revert the documentation branch; do not copy extracted source into evidence or review comments"
+  },
+  "authority_disclaimer": "This inventory does not authenticate the source, grant a redistribution license, authorize extraction or publication, qualify code, approve product use, or move CurrentAuthority.",
+  "generated_at": "2026-08-25T00:00:00Z"
+}
